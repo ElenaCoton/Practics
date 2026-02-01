@@ -22,7 +22,7 @@ namespace Lab1_ex5
             System.Drawing.Drawing2D.GraphicsPath myPath = new System.Drawing.Drawing2D.GraphicsPath();
             // Добавление эллипса, вписанного в прямоугольную форму
             // заданной ширины и высоты
-            myPath.AddEllipse(0, 0, this.Width, this.Height);
+            myPath.AddEllipse(10, 50, this.Width - 100, this.Height - 100);
             Region myRegion = new Region(myPath);
             this.Region = myRegion;
         }

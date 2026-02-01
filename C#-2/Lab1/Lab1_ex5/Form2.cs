@@ -12,12 +12,14 @@ namespace Lab1_ex5
 {
     public partial class Form2 : Form
     {
+        Form1 myF1;
         Form3 myF3;
         Form4 myF4;
         public Form2()
         {
             InitializeComponent();
             this.WindowState = FormWindowState.Maximized;
+            myF1 = new Form1();
             myF3 = new Form3();
             myF4 = new Form4();
         }
@@ -59,6 +61,21 @@ namespace Lab1_ex5
                 myF4 = new Form4();
                 myF4.Show();
                 myF4.Activate();
+            }
+        }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                myF1.Show();
+                myF1.Activate();
+            }
+            catch (ObjectDisposedException ex)
+            {
+                myF1 = new Form1();
+                myF1.Show();
+                myF1.Activate();
             }
         }
     }

@@ -1,0 +1,100 @@
+.title-block
+{
+    border: 2px solid rgb(255, 153, 0);
+    display: flex
+}
+
+.img-title
+{
+    width: 150px;
+}
+.card-txt
+{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.txt
+{
+  display: flex; /* Активация Flexbox */
+  justify-content: center; /* Выравнивание по центру горизонтально */
+  align-items: center; /* Выравнивание по центру вертикально */
+}
+
+.el-tr
+{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 300px;
+}
+
+.el-tr-txt
+{
+  display: flex; /* Активация Flexbox */
+  justify-content: center; /* Выравнивание по центру горизонтально */
+  align-items: center; /* Выравнивание по центру вертикально */
+  margin: 0px 0px 0px 30px;
+}
+.el-block
+{
+    display: flex;
+}
+.bold-blue-text {
+    color: blue; 
+    font-weight: bold; 
+}
+
+.table-grid {
+  display: grid;
+  /* Создаем 3 колонки: Свойство 1fr делит пространство равномерно. */
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 10px; /* Отступы между ячейками */
+  border: 1px solid #91bbfa;
+  padding: 10px;
+}
+
+.header {
+  font-weight: bold;
+  background-color: #a3c1ee;
+  padding: 5px;
+  text-align:center;
+}
+
+.table-grid > div {
+  border-bottom: 1px solid #eee;
+  padding: 5px;
+}
+
+.star-list {
+  list-style: none; /* Убираем стандартные маркеры */
+  padding-left: 20px;
+}
+
+.star-list li::before {
+  content: "★"; /* Добавляем звездочку (можно ✦, ✧) */
+  color: rgb(6, 46, 177); /* Цвет звезды */
+  display: inline-block;
+  width: 1em;
+  margin-left: -1em;
+}
+
+.tok-type
+{
+  display: flex;
+}
+
+.tok-txt
+{
+  background-image: linear-gradient(to bottom, #3fa5fd, #c9f1f3);
+  margin: 0px 20px  0px 20px;
+}
+
+.tok-img
+{
+  display: flex;
+  width: 500px;
+}

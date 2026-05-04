@@ -22,6 +22,10 @@ builder.Services.AddDefaultIdentity<IdentityUser>(options => options.SignIn.Requ
     .AddEntityFrameworkStores<ApplicationDbContext>();
 builder.Services.AddControllersWithViews();
 
+//добавьте выходное ПО промежуточного слоя кэширования в коллекцию служб
+builder.Services.AddOutputCache();
+
+
 var app = builder.Build();
 
 
@@ -45,6 +49,7 @@ else
 }
 
 app.UseHttpsRedirection();
+app.UseOutputCache();//добавьте ПО промежуточного слоя в конвейер обработки запросов
 app.UseStaticFiles();
 
 app.UseRouting();

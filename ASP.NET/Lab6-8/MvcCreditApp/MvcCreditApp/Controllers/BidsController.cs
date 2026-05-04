@@ -22,7 +22,7 @@ namespace MvcCreditApp.Controllers
         }
 
         // GET: Bids
-        //[OutputCache(Duration = 60, Location = OutputCacheLocation.ServerAndClient)]
+        [OutputCache(Duration = 60)]
         public async Task<IActionResult> Index()
         {
             return View(await _context.Bids.ToListAsync());

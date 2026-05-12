@@ -1,0 +1,15 @@
+D:\Project Asp.net\MyStitch\WebAppStitch\Stitch.Dal\bin\Debug\net8.0\Stitch.Dal.deps.json
+D:\Project Asp.net\MyStitch\WebAppStitch\Stitch.Dal\bin\Debug\net8.0\Stitch.Dal.dll
+D:\Project Asp.net\MyStitch\WebAppStitch\Stitch.Dal\bin\Debug\net8.0\Stitch.Dal.pdb
+D:\Project Asp.net\MyStitch\WebAppStitch\Stitch.Dal\bin\Debug\net8.0\Stitch.Core.dll
+D:\Project Asp.net\MyStitch\WebAppStitch\Stitch.Dal\bin\Debug\net8.0\Stitch.Core.pdb
+D:\Project Asp.net\MyStitch\WebAppStitch\Stitch.Dal\obj\Debug\net8.0\Stitch.Dal.csproj.AssemblyReference.cache
+D:\Project Asp.net\MyStitch\WebAppStitch\Stitch.Dal\obj\Debug\net8.0\Stitch.Dal.GeneratedMSBuildEditorConfig.editorconfig
+D:\Project Asp.net\MyStitch\WebAppStitch\Stitch.Dal\obj\Debug\net8.0\Stitch.Dal.AssemblyInfoInputs.cache
+D:\Project Asp.net\MyStitch\WebAppStitch\Stitch.Dal\obj\Debug\net8.0\Stitch.Dal.AssemblyInfo.cs
+D:\Project Asp.net\MyStitch\WebAppStitch\Stitch.Dal\obj\Debug\net8.0\Stitch.Dal.csproj.CoreCompileInputs.cache
+D:\Project Asp.net\MyStitch\WebAppStitch\Stitch.Dal\obj\Debug\net8.0\Stitch.Dal.csproj.Up2Date
+D:\Project Asp.net\MyStitch\WebAppStitch\Stitch.Dal\obj\Debug\net8.0\Stitch.Dal.dll
+D:\Project Asp.net\MyStitch\WebAppStitch\Stitch.Dal\obj\Debug\net8.0\refint\Stitch.Dal.dll
+D:\Project Asp.net\MyStitch\WebAppStitch\Stitch.Dal\obj\Debug\net8.0\Stitch.Dal.pdb
+D:\Project Asp.net\MyStitch\WebAppStitch\Stitch.Dal\obj\Debug\net8.0\ref\Stitch.Dal.dll

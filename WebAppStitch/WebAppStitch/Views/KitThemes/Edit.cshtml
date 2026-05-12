@@ -1,0 +1,30 @@
+﻿@using Stitch.Core.InputModels
+@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+}
+@model KitInputModel
+
+<form asp-action="Edit" method="post">
+    <input type="hidden" asp-for="Id" />
+
+    <h3>Набор: @Model.Name</h3>
+    <h3>Номер: @Model.KitNumber</h3>
+    <div class="form-group">
+        @for (int i = 0; i < Model.ThemeCheckBoxes.Count; i++)
+        {
+            <div class="checkbox">
+                <label>
+                    <!-- Скрытое поле для передачи ID -->
+                    <input type="hidden" asp-for="@Model.ThemeCheckBoxes[i].Id" />
+                    <!-- Сам чекбокс -->
+                    <input type="checkbox" asp-for="@Model.ThemeCheckBoxes[i].IsSelected" />
+                    @Model.ThemeCheckBoxes[i].Title
+                </label>
+            </div>
+        }
+    </div>
+
+    <button type="submit" class="btn btn-primary">Сохранить</button>
+</form>

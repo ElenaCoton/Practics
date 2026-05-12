@@ -1,0 +1,142 @@
+﻿@model Stitch.Core.InputModels.KitInputModel
+
+@{
+    ViewData["Title"] = "Edit";
+}
+
+<h1>Изменение</h1>
+
+<h4>Основные параметры, характеризующие набор для вышивания</h4>
+<hr />
+<div class="row">
+    <div class="col-md-10">
+        <form asp-action="Edit" method="post"  enctype="multipart/form-data">
+            <div class="main-container" style="display: flex; gap: 20px;">
+                <!-- Левая часть (основные поля) -->
+                <div class="left-side" ">
+                    <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+                    <input type="hidden" asp-for="Id" />
+                    <div class="form-group">
+                        <label asp-for="Name" class="control-label"></label>
+                        <input asp-for="Name" class="form-control" />
+                        <span asp-validation-for="Name" class="text-danger"></span>
+                    </div>
+                    <div class="form-group">
+                        <label asp-for="KitNumber" class="control-label"></label>
+                        <input asp-for="KitNumber" class="form-control" />
+                        <span asp-validation-for="KitNumber" class="text-danger"></span>
+                    </div>
+                    <div class="form-group">
+                        <label asp-for="ManufactureId" class="control-label"></label>
+                        <select asp-for="ManufactureId" class="form-control" asp-items="ViewBag.ManufactureId"></select>
+                        <span asp-validation-for="ManufactureId" class="text-danger"></span>
+                    </div>
+                    <div class="form-group">
+                        <label asp-for="CanvasId" class="control-label"></label>
+                        <select asp-for="CanvasId" class="form-control" asp-items="ViewBag.CanvasId"></select>
+                        <span asp-validation-for="CanvasId" class="text-danger"></span>
+                    </div>
+                    <div class="form-group">
+                        <label asp-for="NeedleworkId" class="control-label"></label>
+                        <select asp-for="NeedleworkId" class="form-control" asp-items="ViewBag.NeedleworkId"></select>
+                        <span asp-validation-for="NeedleworkId" class="text-danger"></span>
+                    </div>
+                    <div class="form-group">
+                        <label asp-for="StatusId" class="control-label"></label>
+                        <select asp-for="StatusId" class="form-control" asp-items="ViewBag.StatusId"></select>
+                        <span asp-validation-for="StatusId" class="text-danger"></span>
+                    </div>
+                    <div class="form-group">
+                        <label asp-for="Complexity" class="control-label"></label>
+                        <input asp-for="Complexity" class="form-control" />
+                        <span asp-validation-for="Complexity" class="text-danger"></span>
+                    </div>
+                    <div class="form-group">
+                        <label asp-for="ColorNumber" class="control-label"></label>
+                        <input asp-for="ColorNumber" class="form-control" />
+                        <span asp-validation-for="ColorNumber" class="text-danger"></span>
+                    </div>
+                    <div class="form-group">
+                        <label asp-for="XCount" class="control-label"></label>
+                        <input asp-for="XCount" class="form-control" type="number" step="0.01" />
+                        <span asp-validation-for="XCount" class="text-danger"></span>
+                    </div>
+                    <div class="form-group">
+                        <label asp-for="YCount" class="control-label"></label>
+                        <input asp-for="YCount" class="form-control" type="number" step="0.01" />
+                        <span asp-validation-for="YCount" class="text-danger"></span>
+                    </div>
+                    <div class="form-group">
+                        <label asp-for="Quantity" class="control-label"></label>
+                        <input asp-for="Quantity" class="form-control" />
+                        <span asp-validation-for="Quantity" class="text-danger"></span>
+                    </div>
+                    <div class="form-group">
+                        <label asp-for="EndDate" class="control-label"></label>
+                        <input asp-for="EndDate" class="form-control" />
+                        <span asp-validation-for="EndDate" class="text-danger"></span>
+                    </div>
+                    <div class="form-group">
+                        <label asp-for="StoragePlace" class="control-label"></label>
+                        <input asp-for="StoragePlace" class="form-control" />
+                        <span asp-validation-for="StoragePlace" class="text-danger"></span>
+                    </div>
+
+                    <div class="form-group">
+                        <label asp-for="Description" class="control-label"></label>
+                        <input asp-for="Description" class="form-control" />
+                        <span asp-validation-for="Description" class="text-danger"></span>
+                    </div>
+                    <div class="form-group">
+                        <input type="submit" value="Save" class="btn btn-primary" />
+                    </div>
+                    <div>
+                        @Html.ValidationSummary(false, "", new { @class = "text-danger" })
+                    </div>
+                </div>
+
+                <!-- Правая часть (дополнительные поля) -->
+                <div class="right-side" style="border-left: 1px solid #ccc; padding-left: 20px; ">
+                    <div class="form-group">
+
+                        <form class="form-group" method="post"  enctype="multipart/form-data">
+                            <label asp-for="ImageLink" class="control-label"></label>
+                            <input asp-for="ImageLink" class="form-control" />
+                            <span asp-validation-for="ImageLink" class="text-danger"></span>
+                            <img src="@Model.ImageLink" alt="Product Image" style="max-width:350px;" />
+
+                            <input type="file" name="Upload" value="Upload" class="form-control" accept="image/*" />
+                        </form>
+
+                        <br/>
+                        <!-- Input с типом file -->
+                        <label class="control-label"> Тематика</label>
+                        @for (int i = 0; i < Model.ThemeCheckBoxes.Count; i++)
+                        {
+                            <div class="checkbox">
+                                <label>
+                                    <!-- Скрытое поле для передачи ID -->
+                                    <input type="hidden" asp-for="@Model.ThemeCheckBoxes[i].Id" />
+                                    <!-- Сам чекбокс -->
+                                    <input type="checkbox" asp-for="@Model.ThemeCheckBoxes[i].IsSelected" />
+                                    @Model.ThemeCheckBoxes[i].Title
+                                </label>
+                            </div>
+                        }
+                    </div>
+                    
+                </div>
+            </div>
+        </form>
+    </div>
+</div>
+
+
+
+<div>
+    <a asp-action="Index">Back to List</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

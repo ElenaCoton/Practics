@@ -1,0 +1,101 @@
+﻿@model Stitch.Core.Dtos.KitDto
+
+@{
+    ViewData["Title"] = "Create";
+}
+
+<h1>Создание</h1>
+
+<h4>Набор для вышивания</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="Create" method="post"  enctype="multipart/form-data">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label asp-for="Name" class="control-label"></label>
+                <input asp-for="Name" class="form-control" />
+                <span asp-validation-for="Name" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="KitNumber" class="control-label"></label>
+                <input asp-for="KitNumber" class="form-control" />
+                <span asp-validation-for="KitNumber" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="ManufactureId" class="control-label"></label>
+                <select asp-for="ManufactureId" class ="form-control" asp-items="ViewBag.ManufactureId"></select>
+            </div>
+            <div class="form-group">
+                <label asp-for="CanvasId" class="control-label"></label>
+                <select asp-for="CanvasId" class ="form-control" asp-items="ViewBag.CanvasId"></select>
+            </div>
+            <div class="form-group">
+                <label asp-for="NeedleworkId" class="control-label"></label>
+                <select asp-for="NeedleworkId" class ="form-control" asp-items="ViewBag.NeedleworkId"></select>
+            </div>
+            <div class="form-group">
+                <label asp-for="StatusId" class="control-label"></label>
+                <select asp-for="StatusId" class ="form-control" asp-items="ViewBag.StatusId"></select>
+            </div>
+            <div class="form-group">
+                <label asp-for="Complexity" class="control-label"></label>
+                <input asp-for="Complexity" class="form-control" />
+                <span asp-validation-for="Complexity" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="ColorNumber" class="control-label"></label>
+                <input asp-for="ColorNumber" class="form-control" />
+                <span asp-validation-for="ColorNumber" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="XCount" class="control-label"></label>
+                <input asp-for="XCount" class="form-control" type="number" step="0.01" />
+                <span asp-validation-for="XCount" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="YCount" class="control-label"></label>
+                <input asp-for="YCount" class="form-control" type="number" step="0.01" />
+                <span asp-validation-for="YCount" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Quantity" class="control-label"></label>
+                <input asp-for="Quantity" class="form-control" />
+                <span asp-validation-for="Quantity" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="EndDate" class="control-label"></label>
+                <input asp-for="EndDate" class="form-control" />
+                <span asp-validation-for="EndDate" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="StoragePlace" class="control-label"></label>
+                <input asp-for="StoragePlace" class="form-control" />
+                <span asp-validation-for="StoragePlace" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="ImageLink" class="control-label"></label>
+                <input type="file" name="Upload" value="Upload" class="form-control" accept="image/*" />
+            </div>
+
+            @Html.ValidationSummary(false, "", new { @class = "text-danger" })
+
+            <div class="form-group">
+                <label asp-for="Description" class="control-label"></label>
+                <input asp-for="Description" class="form-control" />
+                <span asp-validation-for="Description" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Create" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-action="Index">Back to List</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

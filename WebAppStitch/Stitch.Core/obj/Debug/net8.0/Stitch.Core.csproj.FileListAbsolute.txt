@@ -1,0 +1,14 @@
+D:\Project Asp.net\MyStitch\WebAppStitch\Stitch.Core\bin\Debug\net8.0\Stitch.Core.deps.json
+D:\Project Asp.net\MyStitch\WebAppStitch\Stitch.Core\bin\Debug\net8.0\Stitch.Core.dll
+D:\Project Asp.net\MyStitch\WebAppStitch\Stitch.Core\bin\Debug\net8.0\Stitch.Core.pdb
+D:\Project Asp.net\MyStitch\WebAppStitch\Stitch.Core\obj\Debug\net8.0\Stitch.Core.GeneratedMSBuildEditorConfig.editorconfig
+D:\Project Asp.net\MyStitch\WebAppStitch\Stitch.Core\obj\Debug\net8.0\Stitch.Core.AssemblyInfoInputs.cache
+D:\Project Asp.net\MyStitch\WebAppStitch\Stitch.Core\obj\Debug\net8.0\Stitch.Core.AssemblyInfo.cs
+D:\Project Asp.net\MyStitch\WebAppStitch\Stitch.Core\obj\Debug\net8.0\Stitch.Core.csproj.CoreCompileInputs.cache
+D:\Project Asp.net\MyStitch\WebAppStitch\Stitch.Core\obj\Debug\net8.0\Stitch.Core.dll
+D:\Project Asp.net\MyStitch\WebAppStitch\Stitch.Core\obj\Debug\net8.0\refint\Stitch.Core.dll
+D:\Project Asp.net\MyStitch\WebAppStitch\Stitch.Core\obj\Debug\net8.0\Stitch.Core.pdb
+D:\Project Asp.net\MyStitch\WebAppStitch\Stitch.Core\obj\Debug\net8.0\ref\Stitch.Core.dll
+D:\Project Asp.net\MyStitch\WebAppStitch\Stitch.Core\bin\Debug\net8.0\Stitch.Core.runtimeconfig.json
+D:\Project Asp.net\MyStitch\WebAppStitch\Stitch.Core\obj\Debug\net8.0\Stitch.Core.genruntimeconfig.cache
+D:\Project Asp.net\MyStitch\WebAppStitch\Stitch.Core\obj\Debug\net8.0\Stitch.Core.csproj.AssemblyReference.cache
